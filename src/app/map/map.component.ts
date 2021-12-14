@@ -7,7 +7,10 @@ import * as L from 'leaflet';
 })
 export class MapComponent implements AfterViewInit {
   private map: any;
-  private description = 'salut mon pote'
+  private description = 'salut mon pote';
+  private museename = 'musée de l\'impression sur étoffes';
+  private adresse = '6 rue du moulin';
+  private Website ='https:// LesiteDumusE.com'
   smallIcon = new L.Icon({
     iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon.png',
     iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-icon-2x.png',
@@ -34,11 +37,18 @@ export class MapComponent implements AfterViewInit {
 
 
     tiles.addTo(this.map);
+    const popup = L.popup().setContent('<p style="font-weight: bold;">Musée : </p> '+ this.museename+'' +
+                                         '<p style="font-weight: bold;"> Adresse : </p>'+this.adresse +
+                                          '<p style="font-weight: bold;">Description : </p> '+this.description+
+                                            '<p style="font-weight: bold;">SiteWeb : </p>'+'<a href="'+ this.Website + '">SiteWeb du musée<a/>')
+
 
 
     const marker = L.marker([47.7448968,7.3449397],{
       icon : this.smallIcon
-    }); marker.addTo(this.map).bindPopup(this.description).openPopup();
+
+    });
+    marker.addTo(this.map).bindPopup(popup).openPopup();
   }
 
   constructor() { }
