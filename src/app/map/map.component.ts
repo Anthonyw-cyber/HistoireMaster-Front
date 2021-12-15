@@ -37,9 +37,10 @@ export class MapComponent implements AfterViewInit {
 
 
     tiles.addTo(this.map);
-    const popup = L.popup().setContent('<p style="font-weight: bold;">Musée : </p> '+ this.museename+'' +
+    var popup = L.popup().setContent('<p style="font-weight: bold;">Musée : </p> '+ this.museename+'' +
                                          '<p style="font-weight: bold;"> Adresse : </p>'+this.adresse +
                                           '<p style="font-weight: bold;">Description : </p> '+this.description+
+                                            '<p style="font-weight: bold;"> Dispositif : </p><ul>'+'<li>'+'audio guide'+'</li>'+'</ul>'+
                                             '<p style="font-weight: bold;">SiteWeb : </p>'+'<a href="'+ this.Website + '">SiteWeb du musée<a/>')
 
 
