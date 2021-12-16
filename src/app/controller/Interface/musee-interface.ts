@@ -1,9 +1,14 @@
-interface MuseeInterface{
+
+import {Ihandicap} from "./handicap-Interface";
+
+
+export interface MuseeInterface{
   id : number;
-  museeName : string;
+  name : string;
   adresse:string;
   description: string;
   siteweb: string;
-  dispositif : Array<DispositifInterface>[];
+  typologie :string;
+  handicap : Array<Ihandicap>[];
 
 }

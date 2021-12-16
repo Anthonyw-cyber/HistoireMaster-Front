@@ -1,4 +1,4 @@
-interface DispositifInterface{
+export interface DispositifInterface{
   id: number ;
-  dispositif: string;
+ name: string;
 }
