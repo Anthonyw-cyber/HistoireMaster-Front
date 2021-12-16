@@ -78,6 +78,7 @@ for( let i=0;i< this.Muse.length; i++){}
       '<p style="font-weight: bold;">Description : </p> '+element.description+
       '<p style="font-weight: bold;"> Handicap :  </p>'+element.handicap[0].name+
       '<p style="font-weight: bold;"> Dispositif : </p>' + element.handicap[0].dispositif[0].name+
+      '<p style="font-weight: bold;"> Typologie : </p>' + element.typologie+
 
       '<p style="font-weight: bold;">SiteWeb : </p>'+'<a href="'+ element.siteWeb + '">SiteWeb du musée<a/>')
 
